@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	float kg_morango, kg_maca, kg_total, valor_morango, valor_maca, valor_total;
+    
+    printf ("Informe quilos de morango: ");
+    scanf("%f", &kg_morango);
+    
+    printf ("Informe quilos de maçã: ");
+    scanf("%f", &kg_maca);
+    
+    if(kg_morango <= 5){
+        valor_morango = kg_morango * 6.5;
+    }
+    else{
+        valor_morango = kg_morango * 6.2;
+    }
+    
+    if(kg_maca <= 5){
+        valor_maca = kg_maca * 3.8;
+    }
+    else{
+        valor_maca = kg_maca * 3.5;
+    }
+    
+    valor_total = valor_morango + valor_maca;
+    kg_total = kg_morango + kg_maca;
+    
+    if (valor_total > 50 || kg_total > 10){
+		printf ("O valor a pagar é: %.2f", valor_total * 0.9);
+	}
+	else{
+		printf ("O valor a pagar é: %.2f", valor_total);
+	}
+	
+	return 0;
+}

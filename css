@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Título da página</title>
+        <meta name=>  
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+
+            <div>1</div>
+
+            <div>2</div>
+
+            <div>3</div>
+            
+        </div>
+
+    </body>
+
+</html>
+
+.flex-container {
+    display: flex;
+    background-color: tomato;
+    flex-direction: column-reverse;
+}
+
+.flex-container > div { 
+    background-color: white;    
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}

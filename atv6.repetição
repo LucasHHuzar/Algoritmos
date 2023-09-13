@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main (){
+	
+	setlocale (LC_ALL, "Portuguese");
+	
+	int num, soma;
+	
+	do{
+		printf ("Informe número: ");
+		scanf ("%d", &num);
+		
+		soma += num;
+		
+	}while (num != 0);
+	
+	printf ("Soma: %d", soma);
+	
+	return 0;
+}

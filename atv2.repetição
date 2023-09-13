@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <windows.h>
+
+int main (){
+	
+	int contador;
+	
+	for (contador = 10; contador >= 0; contador--){
+		printf("%d \n", contador);
+    Sleep(1000);
+	}
+	
+	printf ("Fogo!");
+	
+	return 0;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="atividade1.css">
+    <title>Grids CSS</title>
+</head>
+
+<body>
+
+    <div id="container">
+    
+        <div class="itens item1">
+            
+            <p>Exemplos Grid</p> 
+        
+        </div>
+        
+        <div class="itens item2"> 
+
+            <h2>Outros conteúdos</h2>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis officiis porro ut quo excepturi nisi, molestiae maxime voluptatibus. Eaque error molestiae consectetur officia hic omnis ex repellat expedita ducimus.</p>
+        
+        </div>
+        
+        <div class="itens item3">
+        
+            <h1>Conteúdo Principal</h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed reprehenderit beatae, labore dicta quam soluta voluptas aliquam, laborum, nemo doloremque perferendis quod totam sequi quo magnam quia in repellat aspernatur temporibus quae? Alias neque voluptate dignissimos placeat veniam qui corporis explicabo? Unde, aspernatur aliquid. Velit tempora sequi cumque adipisci nulla.</p>
+            
+        </div>
+        
+        <div class="itens item4">
+        
+            <p>
+                Contato: eu@meusite.com
+            </p>
+        
+        </div>
+    
+    </div>
+    
+</body>
+</html>
+
+
+#container {
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    gap: 10px;
+    grid-template-areas: "item1 item1 item1"    "item2 item3 item3" "item4 item4 item4";
+}
+
+.itens {
+    background-color: ;
+    padding: 10px;
+}
+
+.item1 {
+    background-color: #20B2AA;
+    border-radius: 5px;
+    grid-area: item1;
+    text-align: center;
+}
+
+.item2 {
+    grid-area: item2;
+    border-right: 1px solid black;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    background-color: #20B2AA;
+    border-radius: 5px;
+    grid-area: item4;
+    text-align: center;
+}

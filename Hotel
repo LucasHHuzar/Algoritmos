@@ -1,0 +1,114 @@
+# Criação do BD do Hotel Saint Germain
+
+create database HotelSaintGermain;
+
+# Se necessário preciso apagar o banco de dados é só colocar DROP DATABASE "nome do banco"
+
+use HotelSaintGermain;
+
+CREATE TABLE Cliente (
+	IdCliente INT PRIMARY KEY,
+	Nome VARCHAR (100),
+	Sexo CHAR (1),
+	DtaNasc DATETIME NOT NULL,
+	CEP CHAR(8)
+);
+
+ALTER TABLE Cliente
+	ADD CPF CHAR(11) NOT NULL;
+
+
+
+
+
+
+
+
+DROP TABLE Cliente;
+
+CREATE TABLE Cliente (
+	IdCliente INT PRIMARY KEY AUTO_INCREMENT,
+	Nome VARCHAR (100) NOT NULL,
+	CPF NUMERIC (11) UNIQUE,
+	DtaCadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+	Cidade VARCHAR (20) NULL,
+	Sexo CHAR (1),
+    CEP CHAR (8)
+);
+    
+INSERT INTO Cliente
+	(IdCliente, Nome, CPF, DtaCadastro, Cidade, Sexo, CEP)
+VALUES 
+	(1, 'Lucas Huzar', '00099988877', '22.09.2023', 'Curitiba', 'M', '1111122'),
+	(2, 'André Nichele', '99988877766', '22.09.2023', 'Curitiba', 'M', '2222233'),
+    (3, 'Matheus Silva', '66655544433', '22.09.2023', 'Curitiba', 'M', '3333344'),
+    (4, 'Yuri Carvalho', '33322211111', '22.09.2023', 'Curitiba', 'M', '4444455');
+    
+INSERT INTO Cliente
+	(IdCliente, Nome, CPF, DtaCadastro, Cidade, Sexo, CEP)
+VALUES 
+	(5, 'Luísa Sonza', '99988855566', '10.07.2023', 'São Paulo', 'F', '0000022');
+
+SELECT Nome, Sexo FROM Cliente ORDER BY Nome;
+
+SELECT CPF, CEP FROM Cliente WHERE Cidade LIKE '%Curitiba%';
+
+CREATE TABLE Quartos (
+	NroQuarto INT PRIMARY KEY AUTO_INCREMENT,
+    Andar CHAR (1),
+    VlrDiaria VARCHAR (50) NOT NULL
+);
+
+
+
+
+CREATE TABLE Reserva (
+	NroReserva INT PRIMARY KEY,
+    IdCliente INT,
+    DataHora DATETIME NOT NULL,
+    Periodo TINYINT NOT NULL,
+    FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente)
+);
+
+CREATE TABLE Telefone (
+	Numero VARCHAR (20),
+    IdCliente INT,
+	PRIMARY KEY (Numero, IdCliente),
+    FOREIGN KEY (IdCliente) REFERENCES Cliente (IdCliente)
+);
+
+CREATE TABLE Ocupacao (
+	NroReserva INT PRIMARY KEY,
+    Entrada DATETIME, Saida DATETIME,
+    FOREIGN KEY (NroReserva) REFERENCES Reserva(NroReserva)
+);
+
+CREATE TABLE Restaurante (
+	IdRestaurante INT PRIMARY KEY,
+    Prato VARCHAR (50), Preco DECIMAL (5,2)
+);
+
+CREATE TABLE OcupacaoRestaurante (
+	NroReserva INT,
+    IdRestaurante INT,
+    DataHora DATETIME,
+    Quantidade TINYINT,
+    PRIMARY KEY (NroReserva, IdRestaurante, DataHora),
+    FOREIGN KEY (NroReserva) REFERENCES Reserva(NroReserva),
+    FOREIGN KEY (IdRestaurante) REFERENCES Restaurante(IdRestaurante)
+);
+
+ALTER TABLE Cliente 
+	ADD Profissao VARCHAR (30) NOT NULL,
+    ADD Obs VARCHAR (500);
+    
+ALTER TABLE Cliente
+	DROP Profissao,
+	DROP Obs;
+    
+ALTER TABLE Cliente
+	ADD Sexo VARCHAR (1);
+
+ALTER TABLE Cliente
+	MODIFY COLUMN Nome VARCHAR (40) UNIQUE,
+    MODIFY COLUMN Sexo CHAR (2) NOT NULL;

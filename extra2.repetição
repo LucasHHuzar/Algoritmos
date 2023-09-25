@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h> //gerar números aleatórios
+#include <time.h> //gerar números aleatórios a cada execução
+
+int main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	char nome[21], opcao;
+	int resposta, num;
+	
+	
+	
+	printf("Informe seu nome: ");
+	scanf("%s", nome);	
+	
+	printf ("Olá, %s!", nome);
+	
+	printf("\nDeseja jogar (S/N): ");
+	scanf(" %c", &opcao);
+	
+	if(opcao == 'n' || opcao == 'N'){
+		printf("Ok, fica pra próxima!");
+		return 0;
+	}
+	
+	srand(time(NULL));
+	resposta = 1 + rand() % 5;
+	
+	
+	do{
+		printf ("escolha uma porta |_1_| |_2_| |_3_| |_4_| |_5_|");
+		scanf("%d", num);
+	
+		printf("tente novamente!!");
+		
+	}while(num == resposta);
+	
+		printf("Parabéns!");
+
+	
+	return 0;
+}

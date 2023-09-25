@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h> //gerar números aleatórios
+#include <time.h> //gerar números aleatórios a cada execução
+
+int main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	
+	int op, esfera, limpeza, troca, quebrado;
+	
+	esfera = 0;
+	limpeza = 0;
+	troca = 0;
+	quebrado = 0;
+	
+	do{
+		printf("[1] Necessita de esfera.\n", esfera =+ 1);
+		printf("[2] Necessita de limpeza.\n", limpeza =+ 1);
+		printf("[3] Necessida de troca de cabo ou conector.\n", troca =+ 1);
+		printf("[4] Quebrado ou inutilizado.\n", quebrado =+ 1);
+		scanf("%d", op);
+		
+		switch(op){
+			case 1: printf("Foi adicionado!");break;
+			case 2: printf("Foi adicionado!");break;
+			case 3: printf("Foi adicionado!");break;
+			case 4: printf("Foi adicionado!");break;
+			default: printf("Opção inválida");break;
+		}
+		
+	}while (op != 0);
+ 
+		printf("Quantidade de mouses: %d\n", esfera + limpeza + troca + quebrado);
+		printf("Necessita da esfera: %d\n", esfera);
+		printf("Necessita de limpeza: %d\n", limpeza);
+		printf("Necessita troca de cabo ou conector: %d\n", troca);
+		printf("Quebrado ou inutilizado: %d\n", quebrado);
+	
+	
+	return 0;
+}

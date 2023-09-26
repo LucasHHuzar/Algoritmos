@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria de Fábulas</title>
+
+    <style>
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #container{
+            background-color: white;
+            width: 800px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        #cabecalho{
+            
+        }
+
+        #conteudo1{
+            border-bottom: 1px solid black;
+        }
+
+        #fabula1{
+            border-bottom: 1px solid black;
+        }
+
+        #fabula2{
+            border-bottom: 1px solid black;
+        }
+
+        #fabula3{
+            border-bottom: 1px solid black;
+        }
+
+        img{
+            width: 200px;
+        }
+        
+        #cabecalho a{
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div>
+
+            <p id="home">Livraria Exemplo - Fábulas</p>
+
+        </div>
+
+        <div id="cabecalho">
+
+            <a href="#fabula1">Fábula 1</a>
+            <a href="#fabula2">Fábula 2</a>
+            <a href="#fabula3">Fábula 3</a>
+            <a href="#sobre">Sobre</a>
+            
+        </div>
+
+        <div id="conteudo1">
+
+            <h1>O que são fábulas?</h1>
+
+            <p>
+                A fábula é um texto basicamente ficcional cujos personagens, na maioria das vezes, são animais. Outra característica desse gênero é que quase sempre apresenta um ensinamento moral, fazendo alusão a comportamentos humanos por meio de construções metafóricas ou simbólicas.
+            </p>
+
+        </div>
+
+        <div id="fabula1">
+
+            <h1 id="#fabula1">Fábula 1</h1>
+
+            <h2>A Serpente e o Cabrito</h2>
+
+            <img src="https://cdn.culturagenial.com/imagens/untitled-0.jpg"/>
+
+            <p>Uma Cabra que andava a pastar com o filho pisou sem querer uma Serpente com os pés. Esta, assanhada, levantando-se um pouco, picou a Cabra numa teta; mas como o filho logo viesse a mamar, e chupasse com o leite o veneno da Serpente, salvou a Mãe, e ele morreu.</p>
+
+            <p><b>Moral da História:</b> Em muitas situações da vida os inocentes pagam por acontecimentos alheios.</p>
+
+            <a href="#home">Home</a>
+            
+        </div>
+
+        <div id="fabula2">
+
+            <h1 id="#fabula2">Fábula 2</h1>
+
+            <h2>O Cão e a Carne</h2>
+
+            <img src="https://www.conveniomedicoveterinario.com.br/wp-content/uploads/2018/10/dogs-eat-meat1.jpg"/>
+
+            <p>Um Cão levava na boca um pedaço de carne, e, ao atravessar um rio, vendo a carne refletida na água, pareceu-lhe esta maior e soltou a que levava nos dentes para apanhar a que via dentro de água. Porém como a corrente do rio arrastou a carne verdadeira, com ela foi também o seu reflexo, e ficou o Cão sem uma e sem outro.</p>
+
+            <p><b>Moral da História:</b> Em tempos de crise, o pedaço de carne garantiria a subsistência, mas não satisfeito, o cão vê a possibilidade de alcançar um pedaço de carne ainda maior.</p>
+            
+            <a href="#home">Home</a>
+
+        </div>
+
+        <div id="fabula3">
+
+            <h1 id="#fabula3">Fábula 3</h1>
+
+            <h2>O Galo e a Pérola</h2>
+
+            <img src="https://i.pinimg.com/736x/74/37/3a/74373af4670bb5e8f04d265ffc783f37.jpg"/>
+
+            <p>Um galo, que ciscava no terreiro para encontrar alimento, fossem migalhas, ou bichinhos para comer, acabou encontrando uma pérola preciosa. Após observar sua beleza por um instante, disse:</p>
+
+            <p>– Ó linda e preciosa pedra, que reluz seja com o sol, seja com a lua, ainda que esteja num lugar sujo, se te encontrasse um humano, fosse ele um construtor de joias, uma dama que gostasse de enfeites, ou mesmo um mercenário, te recolherias com muita alegria, mas a mim de nada prestas pois que é mais importante uma migalha, um verme, ou um grão que sirvam para o sustento.</p>
+
+            <p><b>Moral da História:</b> Cada um valoriza o que é mais importante para si de acordo com as suas necessidades.</p>
+
+            <a href="#home">Home</a>
+            
+        </div>
+
+        <div>
+
+            <h2 id="#sobre">Sobre</h2>
+
+            <p>Trabalho realizado por Lucas Huzar e Yuri Carvalho para a matéria de Desenvolvimento Web sobre a tutéla do professor Marcelo Fassina</p>
+
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

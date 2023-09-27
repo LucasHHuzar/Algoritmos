@@ -1,42 +1,49 @@
 #include <stdio.h>
 #include <locale.h>
-#include <stdlib.h> //gerar números aleatórios
-#include <time.h> //gerar números aleatórios a cada execução
 
 int main(){
-	
+
 	setlocale(LC_ALL, "Portuguese");
-	
+
 	int op, esfera, limpeza, troca, quebrado;
-	
-	esfera = 0;
-	limpeza = 0;
-	troca = 0;
-	quebrado = 0;
-	
+	float total;
+
+	esfera=0;
+	limpeza=0;
+	troca=0;
+	quebrado=0;
+
 	do{
-		printf("[1] Necessita de esfera.\n", esfera =+ 1);
-		printf("[2] Necessita de limpeza.\n", limpeza =+ 1);
-		printf("[3] Necessida de troca de cabo ou conector.\n", troca =+ 1);
-		printf("[4] Quebrado ou inutilizado.\n", quebrado =+ 1);
-		scanf("%d", op);
-		
-		switch(op){
-			case 1: printf("Foi adicionado!");break;
-			case 2: printf("Foi adicionado!");break;
-			case 3: printf("Foi adicionado!");break;
-			case 4: printf("Foi adicionado!");break;
-			default: printf("Opção inválida");break;
+        printf("\n1 - Necessita da esfera. ", esfera);
+        printf("\n2 - Necessita de limpeza. ", limpeza);
+        printf("\n3 - Necessita troca de cabo ou conector. ", troca);
+        printf("\n4 - Quebrado ou inutilizado. ", quebrado);
+        printf("\n0 - Sair\n");
+        scanf("%d", &op);
+
+        switch (op){
+        	case 1: printf("Foi adicionado", esfera = esfera +1);break;
+        	case 2: printf("Foi adicionado", limpeza = limpeza +1);break;
+        	case 3:printf("Foi adicionado", troca = troca +1);break;
+        	case 4:printf("Foi adicionado", quebrado = quebrado +1);break;
+        	case 0: printf ("Saindo...\n");
 		}
+
+	}while(op != 0);
+	
+	total = esfera + limpeza + troca + quebrado;
+
+	printf("\nQuantidade de mouses: %.f", total);
 		
-	}while (op != 0);
- 
-		printf("Quantidade de mouses: %d\n", esfera + limpeza + troca + quebrado);
-		printf("Necessita da esfera: %d\n", esfera);
-		printf("Necessita de limpeza: %d\n", limpeza);
-		printf("Necessita troca de cabo ou conector: %d\n", troca);
-		printf("Quebrado ou inutilizado: %d\n", quebrado);
-	
-	
-	return 0;
+    printf("\n1 - Necessita da esfera. %d (%.2f%%)", esfera, esfera / total * 100);
+        
+    printf("\n2 - Necessita de limpeza. %d (%.2f%%)", limpeza, limpeza / total * 100);
+    
+    printf("\n3 - Necessita troca de cabo ou conector. %d (%.2f%%)", troca, troca / total * 100);
+    
+    printf("\n4 - Quebrado ou inutilizado. %d (%.2f%%)", quebrado, quebrado / total * 100);
+
+    scanf("%d", &op);
+
+	return 0;	
 }

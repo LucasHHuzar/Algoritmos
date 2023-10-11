@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+	
+	int vetor[6] = {0, 0, 0, 0, 0, 0}, i, face;
+	
+	for(i = 1; i <= 15; i++){
+		printf("Informe o lancamento [%d]: ", i);
+		scanf("%d", &face);
+		
+		vetor[face - 1]++;
+		
+	}
+	
+	for(i = 0; i <= 5; i++){
+		printf("Face %d: %d\n", i + 1, vetor[i]);
+	}
+	
+	return 0;
+}

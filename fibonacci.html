@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    
+    <button onclick="fibonacci()">Clicar!</button>
+    <p id="resultado"></p>
+    
+    <script>
+
+        function fibonacci(){
+
+            let anterior = 1;
+            let atual = 1;
+            let resultado = '1 1 ';
+            let i;
+
+            let termos = prompt('Informe número de termos: ');
+
+            for(i = 3; i <= termos; i++){
+
+                atual = atual + anterior;
+                anterior = atual - anterior;
+
+                resultado = `${resultado} ${atual}`;
+            }
+
+            document.getElementById('resultado').innerText = resultado;
+
+        }
+
+    </script>
+
+</body>
+</html>

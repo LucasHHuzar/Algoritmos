@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+
+int main(){
+	
+	setlocale(LC_ALL,"Portuguese");
+	
+	char nome[51], alimentado, resfriado;
+	int idade;
+	float peso;
+	
+	printf("Responda um breve questionário\n");
+	
+	printf("\nQual o seu nome? ");
+	scanf("%s", nome);
+	
+	printf("\nQual a sua idade? ");
+	scanf("%d", &idade);
+	
+	printf("\nQual o seu peso? ");
+	scanf("%f", &peso);
+	
+	printf("\nEsteve resfriado nos ultimos dias(S/N)? ");
+	scanf(" %c", &resfriado);
+	
+	printf("\nEsta alimentado(S/N)? ");
+	scanf(" %c", &alimentado);
+	
+	if(idade >= 16 && idade <= 69 && peso >= 50 && resfriado == 'n' && 'N' && alimentado == 's' && 'S'){
+		printf("A pessoa está apta para doar sangue!");
+	}else{
+		printf("A pessoa não está apta para doar sangue!");
+	}
+	
+	
+	
+	return 0;
+}

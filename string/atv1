@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+	
+	char nome[21];
+	
+	printf("Escreva o nome: ");
+	scanf(" %20[^\n]", nome);
+	
+	printf("Quantidade de caracteres: %d", strlen(nome));
+	
+	return 0;
+}

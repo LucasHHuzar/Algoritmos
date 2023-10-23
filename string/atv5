@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+	
+	char str1[21] = "Lucas", str2[21] = "Lucas";
+	
+	if(strcmp(str1, str2) == 0){
+		printf("As palavras sao iguais!");	
+	}else{
+		printf("As palavras nao sao iguais!");
+	}
+	
+	return 0;
+}

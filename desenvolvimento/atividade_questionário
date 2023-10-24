@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento web basico</title>
+</head>
+<body>
+
+    <div>Qual o seu nome?</div>
+    <input type="text" name="questionario" id="nome">       
+
+    <br><br>
+
+    <label for="idade">Qual a sua idade?</label><br>
+    <input type="number" min="16" max="69" name="idade" id="idade">
+
+    <br><br>
+
+    <label for="peso">Qual seu peso?</label><br>
+    <input type="number" min="50" max="200" name="peso" id="peso">
+
+    <br><br>
+
+    <label for="resfriado">Esteve resfriado nos últimos dias?</label><br>
+    <input type="radio" name="resfriadosim">Sim
+    <input type="radio" name="resfriadonao">Não
+    
+    <br><br>
+
+    <label for="alimentado">Está alimentado?</label><br>
+    <input type="radio" name="alimentadosim">Sim
+    <input type="radio" name="alimentadonao">Não
+
+    <br><br>
+
+    <button onclick="marcados()">Clicar!</button>
+
+    <script>
+
+        function marcados(){
+            let idade = document.getElementsByName ('idade');
+            let resfriado = document.getElementsByName ('resfriado');
+            let alimentado = document.getElementsByName ('alimentado');
+            let i;
+
+            if(idade >= 16 && idade <= 69 && peso >= 50 && resfriado == 'n' && 'N' && alimentado == 's' && 'S'){
+                alert('A pessoa está apta para doar sangue!');
+            }else{
+                printf("A pessoa não está apta para doar sangue!");
+            }
+
+            for(i = 0; i < marcados.length; i++){
+
+                if(marcados[i].checked){
+
+                    alert(`Você selecionou ${marcados[i].value}.`);break;
+
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

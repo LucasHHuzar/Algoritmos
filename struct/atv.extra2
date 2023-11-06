@@ -1,0 +1,42 @@
+//Escreva um programa que armazene em uma estrutura o modelo e o consumo médio de cinco carros. 
+// Calcule quantos litros de combustível cada um dos carros
+// cadastrados consome para percorrer uma distância de 1.000 quilômetros e 
+//quanto isso custará, considerando o preço do combustível informado pelo usuário.
+#include <stdio.h>
+
+struct Carro{
+	char modelo[21];
+	float consumo;
+};
+
+int main(){
+	
+	struct Carro c[5] = {
+		{"Corsa", 12.9},
+		{"KA", 14.9},
+		{"Ferrari", 6.6},
+		{"Fiesta", 10.2},
+		{"T-Cross", 9}
+	};
+	
+	int i;
+	float litros, preco, custo;
+	
+	litros = 0;
+	preco = 0;
+	
+	printf("Quanto custa o litro da gasolina?\n");
+	scanf("%f", &preco);
+	
+	printf("Modelo       ");
+	printf("Km p/ litro     ");
+	printf("Consumo p/ 1.000 Km     ");
+	printf("Custo total");
+	printf("\n--------------------------------------------------------");
+	
+	for(i = 0; i < 5; i++){
+		printf("\n%-5s %10.2f %10.2f %10.2f", c[i].modelo, c[i].consumo, (c[i].consumo * 1000) / c[i].consumo);
+	}
+	
+	return 0;
+}

@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+struct Usuario{
+	int numero;
+	char nome[21];
+	float espaco_ocupado;
+};
+
+int main(){
+	
+	struct Usuario u[6] = {
+		{1, "Alexandre", 456123789},
+		{2, "Anderson", 1245698456},
+		{3, "Antonio", 123456456},
+		{4, "Carlos", 91257581},
+		{5, "Cesar", 987458},
+		{6, "Rosemary", 789456125}
+	};
+	
+	int i;
+	float soma, media;
+	
+	soma = 0;
+	media = 0;
+	
+	printf("Nr.   ");
+	printf("Usuario       ");
+	printf("Espaco Utilizado     ");
+	printf("%% de uso");
+	printf("\n--------------------------------------------------------");
+	
+	for(i = 0; i < 6; i++){
+		soma = soma + u[i].espaco_ocupado;
+	}
+	
+	for(i = 0; i < 6; i++){
+		printf("\n%-5d %-15s %10.2f MB %12.2f", u[i].numero, u[i].nome, (u[i].espaco_ocupado/1024)/1024, (u[i].espaco_ocupado/soma) * 100);
+	}
+	
+	media = soma / 6;
+	
+	printf("\n\nEspaço total ocupado: %.2f MB", (soma/1024) / 1024);
+	printf("\nEspaço medio ocupado: %.2f MB", (media/1024) / 1024);
+	
+	
+	return 0;
+}

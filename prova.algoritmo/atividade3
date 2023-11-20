@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <locale.h>
+
+struct Frutas{
+	char nome[21];
+	float preco, quilo;
+};
+
+int main(){
+	
+	setlocale(LC_ALL,"Portuguese");
+	
+	struct Frutas f[5];
+	int i;
+	float dinheiro;
+	
+	for (i = 0; i < 5; i++){
+		
+		printf("\nInforme qual o nome da fruta: ");
+		scanf("%s", &f[i].nome);
+		
+		printf("\nInforme o valor por quilo dessa fruta: ");
+		scanf("%f", &f[i].preco);
+		
+	}	
+	
+	printf("\nInforme quantos reias você tem para gastar: ");
+	scanf("%f", &dinheiro);
+	
+	for (i = 0; i < 5; i++){
+		
+		printf("\nVocê consegue comprar %.2f quilos de %s.", dinheiro/f[i].preco, f[i].nome);
+		
+	}
+	
+	return 0;
+}
